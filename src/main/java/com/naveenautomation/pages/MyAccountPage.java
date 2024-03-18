@@ -1,5 +1,7 @@
 package com.naveenautomation.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -55,6 +57,13 @@ public class MyAccountPage extends TestBase {
 	
 	
 	//Downloads
+	@FindBy(css = "div.list-group>a")
+
+	List<WebElement> myAccountPageElements;
+	
+	
+	
+	
 	@FindBy(css = "div.list-group>a:nth-of-type(7)")
 
 	WebElement downloadsBtn;
@@ -106,8 +115,32 @@ public class MyAccountPage extends TestBase {
 	WebElement transactionsBtn;
 	
 	
+	//Add to Wishlist
+		@FindBy(css = "button[type='button'][onclick*='42'][data-original-title='Add to Wish List']")
+
+		WebElement addToWishlistBtn;
+		
+		
+		
+		@FindBy(css = "a#wishlist-total span.hidden-xs.hidden-sm.hidden-md")
+
+		WebElement WishlistBtnOnTop;
 	
 	
+		
+		@FindBy(css = "div.alert.alert-success.alert-dismissible")
+
+		WebElement WishlistConfirmationText;
+		
+		
+		//Order History
+				@FindBy(css = "a.list-group-item:nth-of-type(6)")
+
+				WebElement orderHistoryBtn;
+				
+				
+				
+		
 	
 	
 	
@@ -180,6 +213,19 @@ public class MyAccountPage extends TestBase {
 		return new DownloadsPage();
 	}
 	
+	public DownloadsPage clickDownloadsButton() {
+		for(WebElement listItem:myAccountPageElements) {
+			if(listItem.getText().equalsIgnoreCase("Downloads")) {
+				listItem.click();
+				break;
+			}
+		}
+		
+		return new DownloadsPage();
+	}
+	
+	
+	
 	//Reward points
 	
 	public RewardPointsPage clickRewardPointsBtn() {
@@ -232,7 +278,44 @@ public class MyAccountPage extends TestBase {
 					return new TransactionsPage();
 				}
 	
+				
+//Add to Wishlist
+				
+				/*
+				 * private void clickDesktopIcon() { DesktopIcon.click(); }
+				 * 
+				 * private void clickShowAllDesktopIcon() { showAllDesktopIcon.click(); }
+				 */
 	
-	
-	
+				private void clickAddWishlistBtn() {
+					addToWishlistBtn.click();
+				}
+				
+				private void clickWishlistIcon() {
+					WishlistBtnOnTop.click();
+				}
+				private void validateWishlistBanner() {
+					String wishListBAnner=WishlistConfirmationText.getText();
+					String [] splitSentence=new String[2];
+					splitSentence=wishListBAnner.split("added");
+					String wishlistBanner2=splitSentence[2];
+					String [] itemInWishlist=new String[2];
+					itemInWishlist=wishlistBanner2.split("to");
+					System.out.println("The item added in the wishlist is: "+itemInWishlist[0]);
+					//Assert.assertEquals(itemInWishlist[0],"Apple Cinema 30" ");
+				}
+				public void addToWishlistFlow() {
+					clickDesktopIcon();
+					clickShowAllDesktopIcon();
+					clickAddWishlistBtn();
+					clickWishlistIcon();
+					validateWishlistBanner();
+				}
+				
+				
+				
+				public OrderHistoryPage clickOrderHistoryBtn() {
+					orderHistoryBtn.click();
+					return new OrderHistoryPage();
+				}
 }

@@ -43,6 +43,16 @@ public void validatePasswordChange() {
 	
 }
 
+//added to Wishlist
+
+@Test
+public void validateAdditionToWishlist() {
+	myAccount=loginPage.loggingIn("vrk@yahoo.com", "Password@1");
+    myAccount.addToWishlistFlow();
+	
+	
+}
+
 	
 	
 	

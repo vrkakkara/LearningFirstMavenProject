@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.naveenautomation.tests.AddressBookPageTest">
+      <class name="com.naveenautomation.tests.GiftCertificatePageTest">
         <methods>
           <include name="setupLogger"/>
-          <include name="validateNewAddressAddition"/>
+          <include name="validateGiftCertificate"/>
           <include name="launchBrowser"/>
         </methods>
-      </class> <!-- com.naveenautomation.tests.AddressBookPageTest -->
+      </class> <!-- com.naveenautomation.tests.GiftCertificatePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -25,7 +25,7 @@ public class DownloadsPageTest extends TestBase{
 	@Test
 	public void validateNewsletter() {
 		myAccount=loginPage.loggingIn("vrk@yahoo.com", "Password@1");
-		downloads=myAccount.clickDownloadsBtn();
+		downloads=myAccount.clickDownloadsButton();
 		downloads.downloadsFlow();
 			
 	}

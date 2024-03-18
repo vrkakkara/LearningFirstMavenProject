@@ -5,10 +5,11 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
+import org.testng.ITestNGListener;
 
 import com.naveenautomation.TestBase.TestBase;
 
-public class WebDriverEvents extends TestBase implements WebDriverEventListener{
+public class WebDriverEvents extends TestBase implements WebDriverEventListener, ITestNGListener {
 
 	@Override
 	public void beforeAlertAccept(WebDriver driver) {

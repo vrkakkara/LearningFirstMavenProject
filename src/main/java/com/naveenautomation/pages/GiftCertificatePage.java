@@ -130,7 +130,7 @@ public class GiftCertificatePage extends TestBase {
 
 		String giftCertificateText = giftCertificateConfirmation.getText();
 		Assert.assertEquals(giftCertificateText,
-				"Thank you for purchasing a gift certificate! Once you have completed your order your gift certificate recipient will be sent an e-mail with details how to redeem their gift certificate.");
+				"Thank you for purchasing a goft certificate! Once you have completed your order your gift certificate recipient will be sent an e-mail with details how to redeem their gift certificate.");
 
 	}
 	

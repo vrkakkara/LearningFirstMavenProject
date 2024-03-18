@@ -1,11 +1,12 @@
 package com.naveenautomation.listeners;
 
 import org.testng.IRetryAnalyzer;
+import org.testng.ITestNGListener;
 import org.testng.ITestResult;
 
 import com.naveenautomation.TestBase.TestBase;
 
-public class RetryAnalyzer extends TestBase implements IRetryAnalyzer {
+public class RetryAnalyzer extends TestBase implements IRetryAnalyzer, ITestNGListener  {
 	
 	
 	int count=0;
