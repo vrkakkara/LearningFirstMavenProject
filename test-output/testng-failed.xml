@@ -2,42 +2,20 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="com.naveenautomation.listeners.CustomListener"/>
-    <listener class-name="com.naveenautomation.listeners.TransformerForRetry"/>
-    <listener class-name="com.naveenautomation.listeners.ExtentReportListener"/>
-    <listener class-name="com.naveenautomation.listeners.WebDriverEvents"/>
-    <listener class-name="com.naveenautomation.listeners.RetryAnalyzer"/>
+    <listener class-name="com.saucedemo.listeners.CustomListener"/>
+    <listener class-name="com.saucedemo.listeners.TransformerForRetry"/>
+    <listener class-name="com.saucedemo.listeners.ExtentReportListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.naveenautomation.tests.MyAccountPageTest">
+      <class name="com.saucedemo.tests.AccountloginPageTest">
         <methods>
-          <include name="validateAdditionToWishlist"/>
-          <include name="launchBrowser"/>
-          <include name="setupLogger"/>
-        </methods>
-      </class> <!-- com.naveenautomation.tests.MyAccountPageTest -->
-      <class name="com.naveenautomation.tests.GiftCertificatePageTest">
-        <methods>
-          <include name="setupLogger"/>
-          <include name="validateGiftCertificate"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- com.naveenautomation.tests.GiftCertificatePageTest -->
-      <class name="com.naveenautomation.tests.WishlistPageTest">
-        <methods>
-          <include name="setupLogger"/>
-          <include name="validateNewAddressAddition"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- com.naveenautomation.tests.WishlistPageTest -->
-      <class name="com.naveenautomation.tests.CheckoutPageTest">
-        <methods>
-          <include name="validateCheckout"/>
+          <include name="closeBrowser"/>
           <include name="setupLogger"/>
           <include name="launchBrowser"/>
+          <include name="validateAddToCartFlow"/>
         </methods>
-      </class> <!-- com.naveenautomation.tests.CheckoutPageTest -->
+      </class> <!-- com.saucedemo.tests.AccountloginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

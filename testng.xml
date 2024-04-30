@@ -3,25 +3,13 @@
 <suite name="Suite">
 	<listeners>
 
-		<listener class-name="com.naveenautomation.listeners.CustomListener" />
-		<listener class-name="com.naveenautomation.listeners.TransformerForRetry" />
-		<listener class-name="com.naveenautomation.listeners.ExtentReportListener" />
-		<listener class-name="com.naveenautomation.listeners.WebDriverEvents" />
-		<listener class-name="com.naveenautomation.listeners.RetryAnalyzer" />
+		<listener class-name="com.saucedemo.listeners.CustomListener" />
+		<listener class-name="com.saucedemo.listeners.TransformerForRetry" />
+		<listener class-name="com.saucedemo.listeners.ExtentReportListener" />
 	</listeners>
   <test thread-count="5" name="Test">
-	  
     <classes>
-      <class name="com.naveenautomation.tests.OrderHistoryPageTest"/>
-      <class name="com.naveenautomation.tests.CheckoutPageTest"/>
-      <class name="com.naveenautomation.tests.ReturnRequestTest"/>
-      <class name="com.naveenautomation.tests.MyAccountPageTest"/>
-      <class name="com.naveenautomation.tests.AddressBookPageTest"/>
-      <class name="com.naveenautomation.tests.WishlistPageTest"/>
-      <class name="com.naveenautomation.tests.ContactUsPageTest"/>
-      <class name="com.naveenautomation.tests.DownloadsPageTest"/>
-      <class name="com.naveenautomation.tests.RewardPointsPageTest"/>
-      <class name="com.naveenautomation.tests.GiftCertificatePageTest"/>
+      <class name="com.saucedemo.tests.AccountloginPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
